@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Example</title>
+    <style>
+    
+        .hover-div {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            border: 1px solid black;
+        }
+
+        .hover-div:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!-- Write a <div> element which turns red when someone moves the mouse over it-->
+    <div class="hover-div">Hover over me!</div>
+
+    <!--Make a html text input which logs the value when the input is changing. -->
+    <input type="text" id="myInput" oninput="logValue()" placeholder="Type something..."><br>
+    <script>
+
+function logValue()
+ {
+            var inputValue = document.getElementById("myInput").value;
+            console.log(inputValue);
+        }
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+
+        // Alerting the first name
+        alert(`${person.firstName}`);
+    </script>
+
+<!--Write a button element, it should do something e.g Alert Jane when someone clicks on i-->
+<button>
+    <button onclick="alert('Jane')">Click Me!</button><br> <!-- it displays in the alert box -->
+    <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button><br> <!--it displays in the paragraph -->
+    <button onclick="this.innerHTML = Date()">The time is?</button><br> <!-- it displays in the button-->
+    <button onclick="alert('Hello')">Click me!</button><br> <!-- it displays in the alert box -->  
+    <button onclick="console.log('Hello')">Click me!</button> <br> <!-- it displays in the console-->  
+    <button onclick="document.write('Hello')">Click me!</button><br><!--it displays in the document--> 
+    <button onclick="confirm('Press a button!')">Click me!</button><br> <!-- it displays in the confirm box-->
+    <button onclick="window.print()">Print this page</button><br><!-- it displays in the print box-->
+    <button onclick="window.open('https://www.google.com')">Open Google</button><br><!-- it displays in the new tab-->
+    <button onclick="window.location.href = 'https://www.google.com'">Go to Google</button><br><!-- it displays in the new tab-->
+    <button onclick="this.style.display='none'">Click me!</button><br> <!-- it displays in the button-->
+</button>
+<p id="demo"></p>
+</body>
+</html>
